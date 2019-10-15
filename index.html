@@ -5,13 +5,13 @@
         <script type="text/javascript" src="js/sql.js"></script>
     </head>
     <body>
-        <button name="test" type="button" value="val" onclick="save()">œ¬‘ÿ</button>
+        <button name="test" type="button" value="val" onclick="save()">click</button>
     </body>
     <script>
         function save() {
             //Create the database
             var db = new SQL.Database();
-            db.run("CREATE TABLE test (¡–1 int, ¡–2 char);");
+            db.run("CREATE TABLE test (√Å√ê1 int, √Å√ê2 char);");
             db.run("INSERT INTO test VALUES (0,'hello');");
             db.run("INSERT INTO test VALUES (1,'world');");
             db.run("INSERT INTO test VALUES (55,'34534545');");
