@@ -1,31 +1,66 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-        <script type="text/javascript" src="js/sql.js"></script>
-    </head>
-    <body>
-        <button name="test" type="button" value="val" onclick="save()">click</button>
-    </body>
-    <script>
-        function save() {
-            //Create the database
-            var db = new SQL.Database();
-            db.run("CREATE TABLE test (ÁÐ1 int, ÁÐ2 char);");
-            db.run("INSERT INTO test VALUES (0,'hello');");
-            db.run("INSERT INTO test VALUES (1,'world');");
-            db.run("INSERT INTO test VALUES (55,'34534545');");
-            db.run("INSERT INTO test VALUES (166,'woteggrgrld');");
-            //save to local file
-            var data = db.export();
-            var arraybuff = data.buffer;
-            var blob = new Blob([arraybuff]);
-            var url = window.URL.createObjectURL(blob);
-            var a = document.createElement("a");
-            a.href = url;
-            a.download = 'test.db';
-            a.click();
-            window.URL.revokeObjectURL(url);
-        }
-    </script>
+<title>test </title>
+<style type="text/css"> p {color:blue}</style>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+<body bgcolor="aliceblue">
+<h1 align="center">title h1</h>
+<h2 align="center">title h2</h>
+<p>this is a paraph</p>
+<iframe src="https://calendar.google.com/calendar/embed?src=narumoto.sai%40gmail.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3288.6476232768414!2d133.4620873154957!3d34.48646240216905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1536982978328" width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+<iframe src="http://google.com/" name="iframe_a" width="10%" height="400"></iframe>
+
+<p><a href="http://www.w3school.com.cn" target="iframe_a">W3School.com.cn</a></p>
+<hr/>
+	<table border=1>
+<header>talbe test</header>	
+<tr>
+		<td>row1</td>
+		<td>row2</td>
+			<td> </br><a href=\\200.1.2.121\生産管理部\ style="text-decoration:none" target="_blank">生産管理部</a>
+			<a href="file:///c:" target="_blank">aaa</a>
+</br>aaa
+	</tr>
+	<tr>
+		<td>
+			<a href="http://google.com/" target="_blank"><img src="C:\SAI\Picture\会社外観写真\鳴本石材_本社.jpg" height=100 width=100></a>
+		</td>
+		<td><ol>
+			<li>aaa</li>
+			<li>bbb</li>
+			<li>ccc</li>
+			</ol>
+		</td>
+
+	</tr>
+	</table>
+
+<form action="http://www.google.com" method="post/get">
+<input type="text" name="lastname"
+value="Nixon" size="30" maxlength="50">
+<input type="password">
+<input type="checkbox" checked="checked">
+<input type="radio" checked="checked">
+<input type="submit">
+<input type="reset">
+<input type="hidden">
+<select>
+<option>Apples
+<option selected>Bananas
+<option>Cherries
+</select>
+<textarea name="Comment" rows="1"
+cols="20"></textarea>
+<br>
+<input type="submit">
+</form>
+
+
+<sub>a sub test text here</sub>
+<sup>a sup test text here</sup><br/>
+<bdo dir ="rtl">i love you</bdo>
+</body>
 </html>
